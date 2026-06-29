@@ -10,10 +10,12 @@
 
 ## 💻 Panel Web (Operador / Admin)
 
-* [Centro de Acción](panel-web/centro-de-accion.md)
-* [Monitoreo en Tiempo Real](panel-web/monitoreo-tiempo-real.md)
-* [Gestión de Envíos y Viajes](panel-web/gestion-envios-viajes.md)
+* [Centro de Acción — Dashboard](panel-web/centro-de-accion.md)
+* [Monitoreo en Tiempo Real — Mapa](panel-web/monitoreo-tiempo-real.md)
+* [Gestión de Envíos](panel-web/gestion-envios-viajes.md)
+* [Gestión de Viajes](panel-web/gestion-viajes.md)
 * [Análisis y Reportes](panel-web/analisis-reportes.md)
+* [Administración](panel-web/administracion.md)
 
 ## 📱 App Mobile (Chofer)
 

@@ -1,29 +1,32 @@
 ---
-description: Cómo interpretar el dashboard analítico de rendimiento
+description: Cómo interpretar el dashboard analítico y exportar reportes
 icon: chart-bar
 ---
 
 # Análisis y Reportes
 
-El **Dashboard Analítico** permite evaluar el rendimiento operativo de la flota en un período de tiempo.
+El **Dashboard** (`/dashboard`) incluye un módulo analítico para evaluar el rendimiento operativo de la flota.
 
-## Métricas Principales
+## Métricas Disponibles
 
 | Métrica | Qué mide |
 |---------|----------|
-| **Tasa de entrega exitosa** | % de paquetes entregados sobre el total asignado |
-| **Tiempo promedio por parada** | Tiempo medio que tarda un chofer en completar cada entrega |
-| **Viajes con incidencias** | Cantidad y tipo de incidencias por período |
-| **Rendimiento por chofer** | Comparativa de desempeño individual del equipo |
+| **Envíos del día** | Total de paquetes programados vs. completados |
+| **Viajes activos** | Cantidad de viajes en curso en el período seleccionado |
+| **Alertas por tipo** | Desglose de incidencias (tráfico, falla mecánica, cliente ausente, etc.) |
+| **Estado de flota** | Distribución de vehículos en verde, amarillo y rojo |
 
-## Cómo Filtrar los Datos
+## Filtros
 
-Usá los selectores en la parte superior del dashboard para ajustar la vista:
+Ajustá la vista con los selectores en la parte superior:
 
-- **Período:** día, semana, mes o rango personalizado.
-- **Chofer:** filtrá por uno o varios choferes específicos.
-- **Zona:** limitá el análisis a una región geográfica.
+- **Período:** día actual, semana o rango personalizado
+- **Sucursal:** filtrá por una sucursal específica o ver todas
+
+## Exportar Reporte
+
+Hacé clic en **"Exportar PDF"** (esquina superior derecha del dashboard) para descargar un reporte del período visible. Útil para presentaciones o auditorías.
 
 {% hint style="info" %}
-Los reportes pueden exportarse en formato CSV desde el botón **"Exportar"** en la esquina superior derecha.
+El PDF exportado respeta los filtros activos al momento de la exportación.
 {% endhint %}

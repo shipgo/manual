@@ -1,50 +1,46 @@
 ---
-description: Cómo ingresar paquetes y armar viajes
-icon: truck
+description: Cómo crear, editar y gestionar envíos en el sistema
+icon: box
 ---
 
-# Gestión de Envíos y Viajes
+# Gestión de Envíos
 
-## Cómo Ingresar un Nuevo Paquete
+La sección `/envios` centraliza todos los paquetes del sistema, con su estado, destino y chofer asignado.
 
-{% stepper %}
-{% step %}
-Ir a **Envíos → Nuevo Paquete**.
-{% endstep %}
-
-{% step %}
-Completar los datos del destinatario: nombre, dirección y teléfono de contacto.
-{% endstep %}
-
-{% step %}
-Ingresar el peso y dimensiones del paquete (necesario para la optimización de ruta).
-{% endstep %}
-
-{% step %}
-Confirmar. El paquete queda en estado **"Pendiente de asignación"**.
-{% endstep %}
-{% endstepper %}
-
-## Cómo Asignar Paquetes a un Camión
+## Crear un Nuevo Envío
 
 {% stepper %}
 {% step %}
-Ir a **Viajes → Nuevo Viaje**.
+Ir a **Envíos → Crear** (`/envios/crear`).
 {% endstep %}
 
 {% step %}
-Seleccionar la fecha de ejecución y el chofer disponible.
+Completar los datos de **origen**: sucursal y dirección de retiro.
 {% endstep %}
 
 {% step %}
-Agregar los paquetes pendientes al viaje. El sistema sugiere un orden de paradas optimizado por ruta.
+Ingresar los datos de **carga**: descripción, peso y dimensiones.
 {% endstep %}
 
 {% step %}
-Confirmar el viaje. El chofer recibirá la ruta en su app móvil automáticamente.
+Completar el **destino**: nombre del destinatario, dirección y teléfono de contacto.
+{% endstep %}
+
+{% step %}
+Confirmar. El envío queda en estado **"Pendiente de asignación"** y aparece disponible para ser agregado a un viaje.
 {% endstep %}
 {% endstepper %}
+
+## Otras Acciones sobre Envíos
+
+Desde el listado o el detalle de un envío (`/envios/:id`) podés:
+
+- **Editar** los datos del envío (mientras no esté en tránsito)
+- **Localizar en mapa** para ver su posición en tiempo real
+- **Reportar** una novedad sobre el paquete
+- **Asignar a un viaje** directamente desde el detalle
+- **Eliminar** el envío (solo si está pendiente)
 
 {% hint style="info" %}
-Solo podés asignar paquetes en estado "Pendiente de asignación". Los ya asignados a otro viaje no aparecen en la lista.
+Los envíos ya asignados a un viaje activo no pueden editarse ni eliminarse hasta que el viaje finalice.
 {% endhint %}

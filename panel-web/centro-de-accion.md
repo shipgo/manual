@@ -1,34 +1,39 @@
 ---
-description: Cómo leer las alertas del día y buscar paquetes rápidamente
+description: Cómo leer el dashboard y actuar sobre las alertas del día
 icon: house
 ---
 
-# Centro de Acción
+# Centro de Acción — Dashboard
 
-La pantalla de inicio es el **punto de partida** de cada jornada para el operador. Está diseñada para dar visibilidad inmediata de lo más urgente.
+La pantalla principal (`/dashboard`) es el punto de partida de cada jornada. Concentra las métricas más importantes del día y el estado general de la operación.
 
-## Alertas Diarias
+## Métricas del Día
 
-Al ingresar, verás un resumen de alertas activas organizadas por prioridad:
+Al ingresar verás cuatro indicadores en tiempo real:
+
+| Indicador | Qué muestra |
+|-----------|-------------|
+| **Envíos hoy** | Total de paquetes programados para el día |
+| **Viajes activos** | Cantidad de viajes en curso en este momento |
+| **Alertas** | Incidencias abiertas que requieren atención |
+| **Estado de flota** | Resumen visual verde / amarillo / rojo de todos los vehículos |
+
+## Alertas Activas
+
+Las alertas se ordenan por urgencia:
 
 {% hint style="danger" %}
-**Rojo:** Incidencias que requieren acción inmediata (vehículo detenido, cliente no encontrado).
+**Rojo:** Acción inmediata requerida. Hacé clic para ir al detalle del viaje afectado.
 {% endhint %}
 
 {% hint style="warning" %}
-**Amarillo:** Situaciones a monitorear (demoras, desvíos de ruta).
+**Amarillo:** Situación a monitorear. No bloquea la operación pero conviene revisar.
 {% endhint %}
 
-{% hint style="success" %}
-**Verde:** Viajes en curso sin novedades.
-{% endhint %}
+## Filtros
 
-## Búsqueda Rápida de Paquetes
+Usá los selectores en la parte superior para filtrar por **período** y **sucursal**. El dashboard actualiza todos los indicadores al instante.
 
-Usa la barra de búsqueda en la parte superior para localizar cualquier paquete por:
+## Búsqueda Rápida de Envíos
 
-- Número de seguimiento
-- Nombre del destinatario
-- Dirección de entrega
-
-> El resultado muestra el estado actual del paquete y el viaje al que pertenece.
+La barra de búsqueda en `/envios` permite localizar cualquier paquete por código, destinatario o dirección. El resultado muestra el estado actual y el viaje asignado.
