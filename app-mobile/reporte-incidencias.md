@@ -1,6 +1,5 @@
 ---
 description: Cómo avisar al operador cuando algo sale mal
-icon: triangle-exclamation
 ---
 
 # Reporte de Incidencias

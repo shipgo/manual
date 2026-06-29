@@ -1,6 +1,5 @@
 ---
 description: Cómo registrar el resultado de cada entrega
-icon: box
 ---
 
 # Ejecución de Entregas

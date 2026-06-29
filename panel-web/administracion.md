@@ -1,6 +1,5 @@
 ---
 description: Gestión de usuarios, flota y sucursales (solo Administrador)
-icon: gear
 ---
 
 # Administración

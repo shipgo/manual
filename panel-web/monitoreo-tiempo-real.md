@@ -1,6 +1,5 @@
 ---
 description: Cómo usar el mapa en vivo y gestionar incidencias
-icon: map
 ---
 
 # Monitoreo en Tiempo Real — Mapa

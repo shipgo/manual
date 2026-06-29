@@ -1,6 +1,5 @@
 ---
 description: Cómo crear viajes y asignar envíos, choferes y vehículos
-icon: truck
 ---
 
 # Gestión de Viajes

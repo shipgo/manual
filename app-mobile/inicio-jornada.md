@@ -1,6 +1,5 @@
 ---
 description: Cómo loguearse y ver la ruta del día
-icon: mobile
 ---
 
 # Inicio de Jornada

@@ -1,6 +1,5 @@
 ---
 description: Cómo crear, editar y gestionar envíos en el sistema
-icon: box
 ---
 
 # Gestión de Envíos

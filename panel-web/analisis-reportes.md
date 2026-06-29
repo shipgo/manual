@@ -1,6 +1,5 @@
 ---
 description: Cómo interpretar el dashboard analítico y exportar reportes
-icon: chart-bar
 ---
 
 # Análisis y Reportes

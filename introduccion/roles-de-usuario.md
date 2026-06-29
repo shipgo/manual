@@ -1,6 +1,5 @@
 ---
 description: Los tres roles que interactúan con ShipGo!
-icon: users
 ---
 
 # Roles de Usuario

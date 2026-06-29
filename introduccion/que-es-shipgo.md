@@ -1,6 +1,5 @@
 ---
 description: Una visión general de la plataforma ShipGo!
-icon: rocket
 ---
 
 # ¿Qué es ShipGo!?

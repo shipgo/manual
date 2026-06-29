@@ -1,6 +1,5 @@
 ---
 description: Los términos clave para entender ShipGo!
-icon: book-open
 ---
 
 # Conceptos Básicos

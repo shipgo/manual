@@ -1,6 +1,5 @@
 ---
 description: Cómo leer el dashboard y actuar sobre las alertas del día
-icon: house
 ---
 
 # Centro de Acción — Dashboard
