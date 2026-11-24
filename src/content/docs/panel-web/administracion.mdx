@@ -23,7 +23,16 @@ import { Steps } from '@astrojs/starlight/components';
 
 *Figura: listado de usuarios de ejemplo. Los correos y nombres son de prueba.*
 
-Podés filtrar por **Nombre**, **Email**, **Usuario**, **Rol** y **Localidad**, o usar los atajos **Choferes** y **Administradores**. Cada fila tiene un menú de tres puntos con las acciones de **ver**, **editar** y **eliminar** al usuario. El encabezado ofrece **Crear usuario** y **Exportar CSV**.
+Podés filtrar por **Nombre**, **Email**, **Usuario**, **Rol** y **Localidad**, o usar los atajos **Choferes** y **Administradores**. Cada fila tiene un menú de tres puntos con estas acciones:
+
+| Acción | Cuándo aparece |
+|--------|----------------|
+| **Ver detalles** | Siempre. |
+| **Editar** | Si podés gestionar a ese usuario. Un Administrador no la ve en las filas de Superusuarios ni de otros Administradores (sí en la suya). |
+| **Restablecer contraseña** | En las mismas filas que **Editar**. Pide confirmación y, al confirmar con **Enviar email**, ShipGo! le manda a la persona un email con un enlace para que cree una nueva contraseña. Si el usuario no tiene email cargado, avisa que no se puede restablecer. |
+| **Eliminar** | En las mismas filas que **Editar**, salvo en tu propio usuario. |
+
+El encabezado ofrece **Crear usuario** y **Exportar CSV**.
 
 ## Crear un usuario
 
@@ -43,7 +52,7 @@ No hace falta definir una contraseña: la persona recibe un **email de bienvenid
 :::note
 - Los **Administradores** pueden asignar los roles **Chofer** y **Operario de carga**, y los usuarios que crean quedan en su sucursal.
 - Los **Superusuarios** además pueden asignar **Superusuario** y **Administrador**, y elegir la sucursal del usuario.
-- Nadie puede cambiar sus propios roles ni su sucursal.
+- Un Administrador no puede cambiar sus propios roles ni su sucursal. Un Superusuario sí puede cambiar los suyos; el único límite es que no se le puede quitar el rol al último Superusuario.
 :::
 
 ## Editar un usuario
@@ -51,8 +60,7 @@ No hace falta definir una contraseña: la persona recibe un **email de bienvenid
 Desde el menú de tres puntos de la fila, elegí **Editar**. El formulario es el mismo que al crear, con estas diferencias:
 
 - El **Usuario** (nombre de usuario) no se puede modificar.
-- Un **Administrador** no puede cambiar los roles de un usuario que tenga un rol que él no puede asignar (**Superusuario** o **Administrador**): el campo **Roles** queda deshabilitado con el aviso **Solo un superusuario puede cambiar este rol**.
-- Nadie puede cambiar sus propios roles ni su sucursal: el aviso es **No podés cambiar tus propios roles**.
+- Un **Administrador** no edita a Superusuarios ni a otros Administradores: no ve **Editar** en esas filas y, si intenta entrar por la dirección, ve el aviso **No tenés permiso para editar a este usuario**. Sí puede editar su propio usuario, pero ahí el campo **Roles** queda deshabilitado con el aviso **Solo un Superusuario puede cambiar este rol**.
 - Solo los Superusuarios eligen la **Sucursal**; para un Administrador queda fija en la suya.
 - Si editás tu propio usuario, además aparecen la **foto de perfil** y el cambio de contraseña.
 
@@ -62,4 +70,4 @@ Desde el menú de tu nombre (arriba a la derecha) podés abrir **Mi perfil**, ca
 
 ## Primer ingreso de un usuario nuevo
 
-Si tu cuenta se creó sin tus datos personales completos, la primera vez que ingresás ShipGo! te pide **completar tu cuenta**. Si cambiás tu nombre de usuario en ese paso, tenés que volver a iniciar sesión con el nuevo.
+Si tu cuenta se creó sin tus datos personales completos, la primera vez que ingresás ShipGo! te pide **completar tu cuenta**. Si cambiás tu nombre de usuario en ese paso, tenés que volver a iniciar sesión con el nuevo. En ese paso no podés cambiar tus roles ni tu sucursal (el aviso es **No podés cambiar tus propios roles**).

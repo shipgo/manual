@@ -7,11 +7,11 @@ sidebar:
 
 import { Steps } from '@astrojs/starlight/components';
 
-**Quién puede usarlo:** Superusuarios y Administradores. Se abre desde **Viajes** en el menú lateral. El chofer inicia y ejecuta el viaje desde la [app móvil](/manual/app-mobile/mis-viajes/); desde el panel lo planificás y lo supervisás.
+**Quién puede usarlo:** Superusuarios y Administradores. Se abre desde **Viajes** en el menú lateral. El Chofer inicia y ejecuta el viaje desde la [app móvil](/manual/app-mobile/mis-viajes/); desde el panel lo planificás y lo supervisás.
 
 ## El listado de viajes
 
-![Listado de Viajes con el botón Crear viaje, los filtros Buscar viaje, Rango de fechas y Estados, los atajos Salen hoy, Retrasados, En curso y Últimos 7 días, y la tabla con ID, fecha planificada, estado, chofer, vehículo y paradas y envíos.](../../../assets/web/web-08-viajes-listado.jpg)
+![Listado de Viajes con el botón Crear viaje, los filtros Buscar viaje, Rango de fechas y Estados, los atajos Salen hoy, Retrasados, En curso y Últimos 7 días, y la tabla con ID, fecha planificada, estado, Chofer, vehículo y paradas y envíos.](../../../assets/web/web-08-viajes-listado.jpg)
 
 *Figura: listado de viajes. Los viajes con un triángulo de advertencia junto a la fecha están retrasados.*
 
@@ -21,7 +21,7 @@ Filtros disponibles:
 - **Rango de fechas** y **Estados**.
 - **Atajos:** **Salen hoy**, **Retrasados**, **En curso** y **Últimos 7 días**.
 
-Cada fila muestra el estado del viaje con su etiqueta (ver [estados del viaje](/manual/introduccion/conceptos-basicos/)), el chofer, la patente y cuántas paradas y envíos tiene. Desde el menú de tres puntos de la fila podés elegir:
+Cada fila muestra el estado del viaje con su etiqueta (ver [estados del viaje](/manual/introduccion/conceptos-basicos/)), el Chofer, la patente y cuántas paradas y envíos tiene. Desde el menú de tres puntos de la fila podés elegir:
 
 | Acción | Cuándo aparece |
 |--------|----------------|
@@ -40,15 +40,15 @@ Hacé clic en **Crear viaje**. El formulario tiene tres secciones y un resumen.
 
 1. **Detalles del viaje:** elegí la **Salida planificada** y la **Llegada planificada** (fecha y hora). La **Sucursal de origen** es la de tu usuario y no se puede cambiar. La llegada tiene que ser posterior a la salida.
 2. **Selección de envíos:** a la izquierda están los **Envíos pendientes** (los que esperan en sucursal); a la derecha, los **Envíos seleccionados**. Buscá por código o destino, tildá los envíos que querés y usá el menú **Marcar envíos para…**:
-   - **Entrega al destinatario:** el chofer lleva esos envíos al domicilio.
-   - **Entrega en sucursal:** elegís una sucursal y el chofer deja ahí esos envíos (parada intermedia).
-3. **Vehículo y choferes:** recién con las fechas elegidas se listan los **Vehículos disponibles** y los **Choferes disponibles** para ese horario. Elegí un vehículo y uno o más choferes.
+   - **Entrega al destinatario:** el Chofer lleva esos envíos al domicilio.
+   - **Entrega en sucursal:** elegís una sucursal y el Chofer deja ahí esos envíos (parada intermedia).
+3. **Vehículo y Choferes:** recién con las fechas elegidas se listan los **Vehículos disponibles** y los **Choferes disponibles** para ese horario. Elegí un vehículo y uno o más Choferes.
 4. **Resumen del viaje:** revisá las paradas en el mapa y en la línea de tiempo. Hacé clic en **Calcular ruta** para ver el recorrido y el orden de las paradas; podés subir o bajar una parada para reordenarla. Con el interruptor **Volver a la sucursal de origen al final** agregás el regreso a la ruta.
 5. Hacé clic en **Crear viaje**.
 
 </Steps>
 
-Aparece el aviso **Viaje creado**. Si elegiste un solo chofer, el viaje queda **Planificado**. Si lo ofreciste a varios, queda **Creado** hasta que alguno lo acepte; recién entonces pasa a **Planificado**.
+Aparece el aviso **Viaje creado**. Si elegiste un solo Chofer, el viaje queda **Planificado**. Si lo ofreciste a varios, queda **Creado** hasta que alguno lo acepte; recién entonces pasa a **Planificado**.
 
 :::caution
 - Si cambiás los envíos después de calcular la ruta, ShipGo! avisa **Cambiaste los envíos: volvé a calcular la ruta**.
@@ -58,7 +58,7 @@ Aparece el aviso **Viaje creado**. Si elegiste un solo chofer, el viaje queda **
 
 ## El detalle de un viaje
 
-![Detalle del Viaje 2 en camino con el botón Finalizar, las fechas planificadas y reales, el vehículo, el chofer, el responsable y la lista de paradas con sus envíos.](../../../assets/web/web-09-viaje-detalle.jpg)
+![Detalle del Viaje 2 en camino con el botón Finalizar, las fechas planificadas y reales, el vehículo, el Chofer, el responsable y la lista de paradas con sus envíos.](../../../assets/web/web-09-viaje-detalle.jpg)
 
 *Figura: parte superior del detalle de un viaje en camino. Más abajo siguen el resto de las paradas, el historial de estados y el mapa del viaje.*
 
@@ -78,7 +78,7 @@ El detalle muestra el estado, la **Sucursal**, las fechas de **Salida** y **Lleg
 :::
 
 :::note
-**Iniciar** el viaje no está en el panel: lo hace el chofer asignado desde la app móvil, y **Cerrar la carga** lo hace el operario de carga.
+**Iniciar** el viaje no está en el panel: lo hace el Chofer asignado desde la app móvil, y **Cerrar la carga** lo hace el Operario de carga.
 :::
 
 ## Qué hacer si un viaje queda "Con problemas"
@@ -86,7 +86,7 @@ El detalle muestra el estado, la **Sucursal**, las fechas de **Salida** y **Lleg
 <Steps>
 
 1. Abrí el viaje y revisá el **Historial de estados** para ver cuándo cambió el viaje (y el motivo, si se registró).
-2. Seguilo en el [Mapa en vivo](/manual/panel-web/monitoreo-tiempo-real/) y hablá con el chofer.
+2. Seguilo en el [Mapa en vivo](/manual/panel-web/monitoreo-tiempo-real/) y hablá con el Chofer.
 3. Si se resolvió, hacé clic en **Reanudar**. Si no se puede continuar, **Cancelar viaje**.
 
 </Steps>

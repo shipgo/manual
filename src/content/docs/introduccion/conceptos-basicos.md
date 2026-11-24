@@ -9,18 +9,18 @@ sidebar:
 
 Un **envío** es lo que se le entrega a un destinatario. Un mismo envío puede tener varios **paquetes** (bultos), cada uno con su categoría, peso y una descripción opcional.
 
-Cada envío recibe un **código de seguimiento** único. Con ese código el cliente consulta el estado del envío, y el código viaja impreso en el QR de la [etiqueta](/manual/panel-web/etiqueta-envio/).
+Cada envío recibe un **código de seguimiento** único. Con ese código el Cliente consulta el estado del envío, y el código viaja impreso en el QR de la [etiqueta](/manual/panel-web/etiqueta-envio/).
 
 ### Tipos de entrega
 
 | Tipo | Qué significa |
 |------|---------------|
-| **Entrega a domicilio** | El chofer lleva el envío a la dirección del destinatario. |
+| **Entrega a domicilio** | El Chofer lleva el envío a la dirección del destinatario. |
 | **Retiro en sucursal** | El destinatario retira el envío en una sucursal que se elige al crearlo. |
 
 ### Palabra de entrega
 
-Es una clave de dos palabras (por ejemplo, `LUNA-PERRO`) que le llega por email al **remitente**, junto con el código de seguimiento. El remitente se la pasa a quien recibe el envío y, al momento de la entrega, quien recibe se la dicta al chofer o a quien registra la entrega. Ver [Palabra de entrega](/manual/panel-web/palabra-de-entrega/).
+Es una clave de dos palabras (por ejemplo, `LUNA-PERRO`) que le llega por email al **remitente**, junto con el código de seguimiento. El remitente se la pasa a quien recibe el envío y, al momento de la entrega, quien recibe se la dicta al Chofer o a quien registra la entrega. Ver [Palabra de entrega](/manual/panel-web/palabra-de-entrega/).
 
 ## Sucursal
 
@@ -28,7 +28,7 @@ Una **sucursal** es un punto físico de la empresa. Es el origen de los envíos 
 
 ## Viaje y parada
 
-Un **viaje** agrupa los envíos que se reparten con un vehículo y uno o más choferes, con una fecha y hora de salida y de llegada planificadas.
+Un **viaje** agrupa los envíos que se reparten con un vehículo y uno o más Choferes, con una fecha y hora de salida y de llegada planificadas.
 
 Cada viaje se divide en **paradas**: una por cada destino (un domicilio o una sucursal). Una parada puede incluir varios envíos. El orden de las paradas es el orden de la ruta.
 
@@ -50,12 +50,12 @@ Cada viaje se divide en **paradas**: una por cada destino (un domicilio o una su
 
 | Estado | Significado |
 |--------|-------------|
-| **Creado** | El viaje se ofreció a varios choferes y todavía nadie lo aceptó. En la app del chofer figura como **Pendiente de aceptar**. |
-| **Planificado** | El viaje está armado, con chofer confirmado, y espera la carga. |
+| **Creado** | El viaje se ofreció a varios Choferes y todavía nadie lo aceptó. En la app del Chofer figura como **Pendiente de aceptar**. |
+| **Planificado** | El viaje está armado, con Chofer confirmado, y espera la carga. |
 | **En carga** | Se están cargando los envíos en el vehículo. |
-| **Listo para salir** | La carga está cerrada; el chofer puede iniciar el viaje. |
-| **En camino** | El chofer inició el viaje. |
-| **Con problemas** | Se reportó un incidente. Un administrador puede reanudarlo. |
+| **Listo para salir** | La carga está cerrada; el Chofer puede iniciar el viaje. |
+| **En camino** | El Chofer inició el viaje. |
+| **Con problemas** | Se reportó un incidente. Un Administrador puede reanudarlo. |
 | **Finalizado** | El viaje terminó. |
 | **Cancelado** | El viaje se canceló antes de terminar. |
 
