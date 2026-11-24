@@ -1,14 +1,15 @@
 ---
+title: "Administración"
 description: Gestión de usuarios, flota y sucursales (solo Administrador)
+sidebar:
+  order: 6
 ---
-
-# Administración
 
 Esta sección es exclusiva del rol **Administrador** y agrupa la configuración del sistema.
 
-{% hint style="warning" %}
+:::caution
 Los Operadores Logísticos no tienen acceso a estas pantallas.
-{% endhint %}
+:::
 
 ## Usuarios (`/usuarios`)
 

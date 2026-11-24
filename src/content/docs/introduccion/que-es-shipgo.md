@@ -1,8 +1,9 @@
 ---
+title: "¿Qué es ShipGo!?"
 description: Una visión general de la plataforma ShipGo!
+sidebar:
+  order: 1
 ---
-
-# ¿Qué es ShipGo!?
 
 **ShipGo!** es una plataforma de gestión logística de última milla que permite a las empresas planificar, monitorear y optimizar sus operaciones de entrega en tiempo real.
 

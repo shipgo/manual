@@ -1,8 +1,9 @@
 ---
+title: "Análisis y Reportes"
 description: Cómo interpretar el dashboard analítico y exportar reportes
+sidebar:
+  order: 5
 ---
-
-# Análisis y Reportes
 
 El **Dashboard** (`/dashboard`) incluye un módulo analítico para evaluar el rendimiento operativo de la flota.
 
@@ -26,6 +27,6 @@ Ajustá la vista con los selectores en la parte superior:
 
 Hacé clic en **"Exportar PDF"** (esquina superior derecha del dashboard) para descargar un reporte del período visible. Útil para presentaciones o auditorías.
 
-{% hint style="info" %}
+:::note
 El PDF exportado respeta los filtros activos al momento de la exportación.
-{% endhint %}
+:::

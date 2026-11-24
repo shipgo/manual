@@ -1,8 +1,9 @@
 ---
+title: "Conceptos Básicos"
 description: Los términos clave para entender ShipGo!
+sidebar:
+  order: 3
 ---
-
-# Conceptos Básicos
 
 ## Viaje
 

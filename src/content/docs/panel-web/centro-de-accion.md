@@ -1,8 +1,9 @@
 ---
+title: "Centro de Acción — Dashboard"
 description: Cómo leer el dashboard y actuar sobre las alertas del día
+sidebar:
+  order: 1
 ---
-
-# Centro de Acción — Dashboard
 
 La pantalla principal (`/dashboard`) es el punto de partida de cada jornada. Concentra las métricas más importantes del día y el estado general de la operación.
 
@@ -21,13 +22,13 @@ Al ingresar verás cuatro indicadores en tiempo real:
 
 Las alertas se ordenan por urgencia:
 
-{% hint style="danger" %}
+:::danger
 **Rojo:** Acción inmediata requerida. Hacé clic para ir al detalle del viaje afectado.
-{% endhint %}
+:::
 
-{% hint style="warning" %}
+:::caution
 **Amarillo:** Situación a monitorear. No bloquea la operación pero conviene revisar.
-{% endhint %}
+:::
 
 ## Filtros
 

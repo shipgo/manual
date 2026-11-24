@@ -1,34 +1,25 @@
 ---
+title: "Gestión de Envíos"
 description: Cómo crear, editar y gestionar envíos en el sistema
+sidebar:
+  order: 3
 ---
 
-# Gestión de Envíos
+import { Steps } from '@astrojs/starlight/components';
 
 La sección `/envios` centraliza todos los paquetes del sistema, con su estado, destino y chofer asignado.
 
 ## Crear un Nuevo Envío
 
-{% stepper %}
-{% step %}
-Ir a **Envíos → Crear** (`/envios/crear`).
-{% endstep %}
+<Steps>
 
-{% step %}
-Completar los datos de **origen**: sucursal y dirección de retiro.
-{% endstep %}
+1. Ir a **Envíos → Crear** (`/envios/crear`).
+2. Completar los datos de **origen**: sucursal y dirección de retiro.
+3. Ingresar los datos de **carga**: descripción, peso y dimensiones.
+4. Completar el **destino**: nombre del destinatario, dirección y teléfono de contacto.
+5. Confirmar. El envío queda en estado **"Pendiente de asignación"** y aparece disponible para ser agregado a un viaje.
 
-{% step %}
-Ingresar los datos de **carga**: descripción, peso y dimensiones.
-{% endstep %}
-
-{% step %}
-Completar el **destino**: nombre del destinatario, dirección y teléfono de contacto.
-{% endstep %}
-
-{% step %}
-Confirmar. El envío queda en estado **"Pendiente de asignación"** y aparece disponible para ser agregado a un viaje.
-{% endstep %}
-{% endstepper %}
+</Steps>
 
 ## Otras Acciones sobre Envíos
 
@@ -40,6 +31,6 @@ Desde el listado o el detalle de un envío (`/envios/:id`) podés:
 - **Asignar a un viaje** directamente desde el detalle
 - **Eliminar** el envío (solo si está pendiente)
 
-{% hint style="info" %}
+:::note
 Los envíos ya asignados a un viaje activo no pueden editarse ni eliminarse hasta que el viaje finalice.
-{% endhint %}
+:::

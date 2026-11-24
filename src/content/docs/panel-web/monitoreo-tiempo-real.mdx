@@ -1,14 +1,17 @@
 ---
+title: "Monitoreo en Tiempo Real — Mapa"
 description: Cómo usar el mapa en vivo y gestionar incidencias
+sidebar:
+  order: 2
 ---
 
-# Monitoreo en Tiempo Real — Mapa
+import { Steps } from '@astrojs/starlight/components';
 
 La pantalla `/mapa` muestra la posición en vivo de toda la flota activa y permite actuar sobre incidencias desde el mismo lugar.
 
 ## Cómo Leer el Mapa
 
-Cada ícono en el mapa representa un vehículo en ruta. Su color refleja el estado del viaje (ver [Conceptos Básicos](../introduccion/conceptos-basicos.md)):
+Cada ícono en el mapa representa un vehículo en ruta. Su color refleja el estado del viaje (ver [Conceptos Básicos](/manual/introduccion/conceptos-basicos/)):
 
 - **Clic en un vehículo** → abre el panel lateral con el detalle del viaje: paradas completadas, pendientes y ETA estimado.
 - Usá los filtros para mostrar solo flotas en estado 🔴 o 🟡.
@@ -23,20 +26,11 @@ Desde el detalle de un viaje podés:
 
 ## Qué Hacer ante una Incidencia (Vehículo en Rojo)
 
-{% stepper %}
-{% step %}
-Identificá el viaje afectado en el mapa o en las alertas del [Dashboard](centro-de-accion.md).
-{% endstep %}
+<Steps>
 
-{% step %}
-Abrí el detalle del viaje y revisá la incidencia reportada.
-{% endstep %}
+1. Identificá el viaje afectado en el mapa o en las alertas del [Dashboard](/manual/panel-web/centro-de-accion/).
+2. Abrí el detalle del viaje y revisá la incidencia reportada.
+3. Tomá acción: contactá al chofer, reasigná paradas a otro viaje, o escalá al administrador.
+4. Una vez resuelta la situación, actualizá el estado desde el panel lateral del viaje.
 
-{% step %}
-Tomá acción: contactá al chofer, reasigná paradas a otro viaje, o escalá al administrador.
-{% endstep %}
-
-{% step %}
-Una vez resuelta la situación, actualizá el estado desde el panel lateral del viaje.
-{% endstep %}
-{% endstepper %}
+</Steps>

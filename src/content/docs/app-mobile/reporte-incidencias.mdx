@@ -1,26 +1,23 @@
 ---
+title: "Reporte de Incidencias"
 description: Cómo avisar al operador cuando algo sale mal
+sidebar:
+  order: 3
 ---
 
-# Reporte de Incidencias
+import { Steps } from '@astrojs/starlight/components';
 
 Si algo impide que sigas con la ruta normal, reportalo desde la app. El operador lo verá de inmediato.
 
 ## Cómo Reportar
 
-{% stepper %}
-{% step %}
-Tocá el botón **"Reportar Incidencia"** (ícono de alerta en la barra superior).
-{% endstep %}
+<Steps>
 
-{% step %}
-Seleccioná el tipo de incidencia.
-{% endstep %}
+1. Tocá el botón **"Reportar Incidencia"** (ícono de alerta en la barra superior).
+2. Seleccioná el tipo de incidencia.
+3. Agregá una nota si es necesario y confirmá.
 
-{% step %}
-Agregá una nota si es necesario y confirmá.
-{% endstep %}
-{% endstepper %}
+</Steps>
 
 ## Tipos de Incidencia
 
@@ -31,6 +28,6 @@ Agregá una nota si es necesario y confirmá.
 | El cliente no está en la dirección | Ausencia del destinatario *(esto también se reporta desde la parada)* |
 | Otro problema | Otro — y describilo en la nota |
 
-{% hint style="warning" %}
+:::caution
 No abandones la ruta sin reportar la incidencia. El operador necesita saberlo para reasignar paradas.
-{% endhint %}
+:::
