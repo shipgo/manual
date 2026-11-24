@@ -1,0 +1,93 @@
+/*
+ * Marca ShipGo!: escala teal de web-frontend (src/app/constants/colorPalette.js).
+ * La numeración sigue COLOR_PALETTE (0-based, igual que `colorPalette-N` en Mantine).
+ * Los grises de fondo de la cabecera y el sidebar (#0d1f1c, #14302b, #f3faf9, #cfe7e4)
+ * son propios del manual y no vienen de la paleta de la app.
+ */
+:root {
+  --shg-teal-1: #b2dfdb;
+  --shg-teal-4: #26a69a;
+  --shg-teal-7: #00796b;
+  --shg-teal-9: #004d40;
+}
+
+/* Oscuro (por defecto en Starlight) */
+:root {
+  --sl-color-accent-low: var(--shg-teal-9);
+  --sl-color-accent: var(--shg-teal-4);
+  --sl-color-accent-high: var(--shg-teal-1);
+  --sl-color-text-accent: var(--shg-teal-4);
+  /* Texto sobre el acento (ítem activo del sidebar, skip link): #17181c sobre #26a69a = 5.92:1 */
+  --sl-color-text-invert: var(--sl-color-black);
+}
+
+:root[data-theme='dark'] {
+  --sl-color-bg-nav: #0d1f1c;
+  --sl-color-bg-sidebar: #0d1f1c;
+  --sl-color-hairline-shade: #14302b;
+}
+
+/* Claro */
+:root[data-theme='light'] {
+  --sl-color-accent-low: var(--shg-teal-1);
+  --sl-color-accent: var(--shg-teal-7);
+  --sl-color-accent-high: var(--shg-teal-9);
+  --sl-color-text-accent: var(--shg-teal-7);
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #f3faf9;
+  --sl-color-hairline-shade: #cfe7e4;
+}
+
+/* Cabecera: wordmark + rótulo del manual */
+.site-title img {
+  height: 1.9rem;
+  width: auto;
+}
+.site-title::after {
+  content: 'Manual de usuario' / '';
+  margin-inline-start: 0.75rem;
+  padding-inline-start: 0.75rem;
+  border-inline-start: 1px solid var(--sl-color-hairline);
+  font-size: var(--sl-text-sm);
+  font-weight: 600;
+  color: var(--sl-color-gray-2);
+  white-space: nowrap;
+}
+@media (max-width: 50rem) {
+  .site-title::after {
+    display: none;
+  }
+}
+
+/* Botón principal y tarjetas de la portada */
+.sl-link-button.primary {
+  background-color: var(--shg-teal-9);
+  border-color: var(--shg-teal-9);
+  color: #fff;
+}
+:root[data-theme='dark'] .sl-link-button.primary {
+  background-color: var(--shg-teal-4);
+  border-color: var(--shg-teal-4);
+  color: var(--sl-color-black);
+}
+.sl-link-card {
+  border-radius: 0.75rem;
+}
+.sl-link-card:hover {
+  border-color: var(--sl-color-accent);
+}
+
+/* Portada */
+[data-has-hero] .hero {
+  padding-block: 2.5rem;
+}
+[data-has-hero] .hero img {
+  filter: drop-shadow(0 8px 24px rgba(0, 77, 64, 0.35));
+  border-radius: 1.5rem;
+}
+
+/* Capturas: marco sutil */
+.sl-markdown-content img {
+  border-radius: 0.75rem;
+  border: 1px solid var(--sl-color-hairline);
+}
