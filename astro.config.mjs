@@ -9,6 +9,16 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Manual de usuario — ShipGo!',
+      logo: {
+        light: './src/assets/brand/shipgo-claro.svg',
+        dark: './src/assets/brand/shipgo-oscuro.svg',
+        alt: 'ShipGo!',
+        replacesTitle: true,
+      },
+      customCss: ['./src/styles/marca.css'],
+      head: [
+        { tag: 'meta', attrs: { name: 'theme-color', content: '#004d40' } },
+      ],
       description: 'Manual de usuario de ShipGo!, la plataforma de gestión logística de última milla.',
       defaultLocale: 'root',
       locales: {
