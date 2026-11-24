@@ -2,7 +2,7 @@
 
 Manual de usuario de **ShipGo!**, la plataforma de gestión logística de última milla. Está hecho con [Astro Starlight](https://starlight.astro.build) y se publica en GitHub Pages.
 
-> Antes de esta versión el manual vivía en GitBook (`SUMMARY.md` y `.gitbook.yaml`). Se migró a Starlight; el contenido es el mismo.
+> Antes de esta versión el manual vivía en GitBook (`SUMMARY.md` y `.gitbook.yaml`). Se migró a Starlight y el contenido se reescribió y amplió respecto de la versión de GitBook.
 
 Publicado en: https://shipgo.github.io/manual/
 
@@ -25,7 +25,8 @@ src/content/docs/
 ├── index.mdx           # portada
 ├── introduccion/
 ├── panel-web/
-└── app-mobile/
+├── app-mobile/
+└── portal/            # portal del cliente y seguimiento público
 src/assets/             # imágenes usadas desde las páginas
 public/                 # archivos estáticos (favicon)
 .github/workflows/      # deploy a GitHub Pages
@@ -49,7 +50,15 @@ public/                 # archivos estáticos (favicon)
 
 Los links internos deben incluir el base: `/manual/panel-web/centro-de-accion/`.
 
+**Slugs heredados:** algunos nombres de archivo (y por lo tanto de URL) no coinciden con el título actual, a propósito, para no romper links existentes. Por ejemplo: `gestion-envios-viajes` = Envíos, `centro-de-accion` = Dashboard, `monitoreo-tiempo-real` = Mapa en vivo, `ejecucion-entregas` = Entregas e `inicio-jornada` = Iniciar el viaje. Si renombrás uno, dejá una redirección.
+
+**Títulos:** en mayúscula solo la primera palabra y los nombres propios.
+
 Avisos: `:::note`, `:::tip`, `:::caution` y `:::danger` (cerrar con `:::`). Pasos: componente `<Steps>` con una lista numerada.
+
+## Warning conocido del build
+
+`Entry docs → 404 was not found` es esperable: Starlight inyecta su propia página 404 y agregar `src/content/docs/404.md` genera un conflicto de rutas (`/404` ya existe), así que se dejó el comportamiento por defecto.
 
 ## Publicación
 

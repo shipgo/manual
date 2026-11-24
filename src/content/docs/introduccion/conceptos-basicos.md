@@ -1,5 +1,5 @@
 ---
-title: "Conceptos Básicos"
+title: "Conceptos básicos"
 description: Los términos y estados clave para entender ShipGo!
 sidebar:
   order: 3
@@ -20,7 +20,7 @@ Cada envío recibe un **código de seguimiento** único. Con ese código el clie
 
 ### Palabra de entrega
 
-Es una clave de dos palabras (por ejemplo, `LUNA-PERRO`) que el destinatario recibe por email. Al entregar el envío, el destinatario se la dicta a quien entrega. Ver [Palabra de entrega](/manual/panel-web/palabra-de-entrega/).
+Es una clave de dos palabras (por ejemplo, `LUNA-PERRO`) que le llega por email al **remitente**, junto con el código de seguimiento. El remitente se la pasa a quien recibe el envío y, al momento de la entrega, quien recibe se la dicta al chofer o a quien registra la entrega. Ver [Palabra de entrega](/manual/panel-web/palabra-de-entrega/).
 
 ## Sucursal
 
@@ -50,7 +50,8 @@ Cada viaje se divide en **paradas**: una por cada destino (un domicilio o una su
 
 | Estado | Significado |
 |--------|-------------|
-| **Planificado** | El viaje está armado y espera la carga. |
+| **Creado** | El viaje se ofreció a varios choferes y todavía nadie lo aceptó. En la app del chofer figura como **Pendiente de aceptar**. |
+| **Planificado** | El viaje está armado, con chofer confirmado, y espera la carga. |
 | **En carga** | Se están cargando los envíos en el vehículo. |
 | **Listo para salir** | La carga está cerrada; el chofer puede iniciar el viaje. |
 | **En camino** | El chofer inició el viaje. |

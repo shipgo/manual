@@ -17,7 +17,7 @@ ShipGo! se usa desde tres lugares, según quién seas:
 | **App móvil** | Choferes y operarios de carga | El chofer recibe sus viajes, navega la ruta y registra entregas e incidentes. El operario de carga controla qué envíos se cargan en el vehículo. |
 | **Portal y seguimiento público** | Clientes | Ver el estado de los envíos con una cuenta propia o, sin cuenta, con solo el código de seguimiento. |
 
-Este manual cubre sobre todo el **panel web** y la **app móvil**.
+Este manual cubre el **panel web**, la **app móvil**, el **portal del cliente** y el **seguimiento público**.
 
 ## Cómo es la operación de punta a punta
 

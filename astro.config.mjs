@@ -23,8 +23,8 @@ export default defineConfig({
       },
       sidebar: [
         { label: '🚀 Introducción y Primeros Pasos', items: [{ autogenerate: { directory: 'introduccion' } }] },
-        { label: '💻 Panel Web (Operador / Admin)', items: [{ autogenerate: { directory: 'panel-web' } }] },
-        { label: '📱 App Mobile (Chofer)', items: [{ autogenerate: { directory: 'app-mobile' } }] },
+        { label: '💻 Panel Web (Administración)', items: [{ autogenerate: { directory: 'panel-web' } }] },
+        { label: '📱 App Mobile (Chofer y Operario de carga)', items: [{ autogenerate: { directory: 'app-mobile' } }] },
         { label: '📦 Portal del Cliente y Seguimiento', items: [{ autogenerate: { directory: 'portal' } }] },
       ],
     }),
