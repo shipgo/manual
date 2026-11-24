@@ -91,3 +91,13 @@
   border-radius: 0.75rem;
   border: 1px solid var(--sl-color-hairline);
 }
+
+/*
+ * Selector de tema: Starlight le fija 6.25em, que en español corta «Oscuro» y
+ * «Automático». Con `width: auto` toma el ancho de la opción más larga (no salta
+ * al cambiar de tema). !important porque el ancho viene de un estilo con scope.
+ */
+starlight-theme-select select {
+  width: auto !important;
+  text-overflow: clip !important;
+}
