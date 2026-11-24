@@ -1,0 +1,46 @@
+---
+title: "Palabra de entrega"
+description: Qué es la palabra de entrega, cómo se genera al crear un envío y cómo se usa al entregar.
+sidebar:
+  order: 6
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+**Quién puede usarla:** Superusuarios y Administradores al crear el envío; el Chofer la pide al entregar.
+
+La **palabra de entrega** es una clave de dos palabras (por ejemplo, `LUNA-PERRO`) que le llega por email al **remitente**, junto con el código de seguimiento. El remitente se la pasa a quien recibe el envío, y esa persona se la dicta al Chofer (o a quien registra la entrega en el panel) cuando le entregan el paquete. Así se confirma que el envío llegó a la persona correcta.
+
+## Al crear el envío
+
+En el formulario de [Crear envío](/manual/panel-web/gestion-envios-viajes/), al final, hay una tarjeta **Palabra de entrega** con el interruptor **Generar palabra de entrega**. Viene **activado**.
+
+- **Activado:** ShipGo! genera la palabra al registrar el envío y se la manda por email al remitente.
+- **Desactivado:** el envío se entrega sin palabra. Los avisos por email no la mencionan y la entrega no la exige.
+
+:::caution
+La decisión se toma **solo al crear** el envío. Después no se puede generar, cambiar ni quitar la palabra.
+:::
+
+:::note
+Por seguridad, el panel **no muestra** la palabra de ningún envío. Tampoco aparece en el seguimiento público ni en el portal del cliente. Solo la conoce quien la recibe por email (el remitente) y a quien este se la pase.
+:::
+
+## Al entregar
+
+- **Chofer en la app:** si el envío tiene palabra, el Chofer se la pide a quien recibe antes de confirmar la entrega. Ver [Entregas](/manual/app-mobile/ejecucion-entregas/).
+- **Entrega desde el panel:** si registrás una entrega o un retiro desde el [detalle del envío](/manual/panel-web/gestion-envios-viajes/), el campo **Palabra de entrega** aparece solo si el envío tiene palabra y, cuando aparece, es **obligatorio**.
+
+<Steps>
+
+1. Pedile la palabra a quien recibe el envío (la tiene que conseguir del remitente, que es quien la recibió por email).
+2. Escribila en el campo **Palabra de entrega**. No importan las mayúsculas, las tildes, los guiones ni los espacios: `luna perro` equivale a `LUNA-PERRO`.
+3. Confirmá la entrega.
+
+</Steps>
+
+Si la palabra no coincide, ShipGo! muestra el error **La palabra de entrega ingresada no coincide con la registrada para este envío** y la entrega no se registra hasta que la corrijas.
+
+:::caution
+Si el envío tiene palabra, completarla es obligatorio también en la entrega desde el panel: el sistema la valida y rechaza la entrega si falta o es incorrecta. Si el envío no tiene palabra, el campo no aparece.
+:::
