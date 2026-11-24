@@ -7,3 +7,33 @@ import { ClientRouter } from 'astro:transitions';
 
 <Default {...Astro.props}><slot /></Default>
 <ClientRouter />
+
+<script>
+  // Starlight restaura el scroll del sidebar y sus grupos abiertos sólo al cargar el
+  // documento (SidebarPersister). Con ClientRouter no hay recarga, así que el sidebar
+  // nuevo aparecería arriba de todo: lo guardamos antes del cambio y lo reaplicamos.
+  const DESKTOP = '(min-width: 50em)';
+  let scroll = 0;
+  let abiertos: boolean[] = [];
+
+  document.addEventListener('astro:before-swap', () => {
+    const sidebar = document.getElementById('starlight__sidebar');
+    scroll = sidebar?.scrollTop ?? 0;
+    abiertos = Array.from(document.querySelectorAll<HTMLDetailsElement>('#starlight__sidebar details')).map(
+      (d) => d.open
+    );
+  });
+
+  document.addEventListener('astro:after-swap', () => {
+    if (!matchMedia(DESKTOP).matches) return;
+    const sidebar = document.getElementById('starlight__sidebar');
+    if (!sidebar) return;
+    const grupos = Array.from(sidebar.querySelectorAll<HTMLDetailsElement>('details'));
+    if (grupos.length === abiertos.length) {
+      grupos.forEach((d, i) => {
+        d.open = abiertos[i] || !!d.querySelector('[aria-current="page"]');
+      });
+    }
+    sidebar.scrollTop = scroll;
+  });
+</script>
