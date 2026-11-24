@@ -1,0 +1,45 @@
+---
+title: "Etiqueta imprimible del envío"
+description: Cómo abrir e imprimir la etiqueta de 100 x 150 mm de un envío, con su código QR.
+sidebar:
+  order: 5
+---
+
+import { Steps } from '@astrojs/starlight/components';
+
+**Quién puede usarla:** Superusuarios y Administradores.
+
+La **etiqueta** es una hoja de 100 x 150 mm, en blanco y negro, que se pega en el paquete. Identifica de dónde sale y a dónde va el envío y lleva un **código QR** con el código de seguimiento, que se lee desde la app móvil.
+
+## Imprimirla
+
+<Steps>
+
+1. Abrí la etiqueta de cualquiera de estas dos maneras:
+   - En el listado de **Envíos**, abrí el menú de tres puntos de la fila y elegí **Imprimir etiqueta**.
+   - En el [detalle del envío](/manual/panel-web/gestion-envios-viajes/), hacé clic en **Imprimir etiqueta**.
+2. Revisá la vista previa. Arriba figura el código de seguimiento del envío.
+3. Hacé clic en **Imprimir**. Se abre el cuadro de impresión de tu navegador: elegí la impresora y el tamaño de papel de la etiqueta.
+4. Para volver al detalle, hacé clic en **Volver**.
+
+</Steps>
+
+## Qué contiene
+
+| Zona | Contenido |
+|------|-----------|
+| **Encabezado** | El logo de ShipGo! y el tipo de entrega: **A domicilio** o **Retiro en sucursal**. |
+| **Desde** | El nombre y la dirección de la sucursal de origen. |
+| **Hasta** | El nombre del destinatario, la dirección, la localidad, la provincia y el teléfono. En un retiro en sucursal figura la sucursal de retiro y, debajo, **Retira:** con el nombre del destinatario. |
+| **Código QR** | Contiene únicamente el código de seguimiento. Al lado, el peso y el contenido (hasta tres líneas; si hay más, aparece "+N más"). |
+| **Pie** | La leyenda de seguimiento y la fecha y hora de impresión. |
+
+Si el nombre o la dirección son largos, el tamaño del texto se achica solo para que nada quede cortado.
+
+:::caution
+Un envío sin código de seguimiento no tiene etiqueta: la acción aparece deshabilitada y, si abrís la pantalla, un aviso te lo indica.
+:::
+
+:::tip
+La etiqueta se imprime en blanco y negro. Si tu navegador ofrece la opción, desactivá los encabezados y pies de página y dejá la escala al 100 % para que respete el tamaño real.
+:::

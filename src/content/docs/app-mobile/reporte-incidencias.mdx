@@ -1,33 +1,80 @@
 ---
-title: "Reporte de Incidencias"
-description: Cómo avisar al operador cuando algo sale mal
+title: "Incidentes y viaje con problemas"
+description: Cómo avisar a la empresa cuando algo sale mal y cómo reanudar el viaje
 sidebar:
-  order: 3
+  order: 6
 ---
 
 import { Steps } from '@astrojs/starlight/components';
 
-Si algo impide que sigas con la ruta normal, reportalo desde la app. El operador lo verá de inmediato.
+Si algo te impide seguir con normalidad (una falla del vehículo, un accidente, una emergencia), reportalo desde la app. La empresa recibe el aviso con tu ubicación.
 
-## Cómo Reportar
+:::danger
+Si hay riesgo de vida, **llamá primero a emergencias**. El botón de incidente de la app solo avisa a la empresa: **no llama a emergencias**.
+:::
+
+## Cómo reportar un incidente
+
+El botón de **incidente** (triángulo rojo) está en la franja de abajo del mapa de navegación y también en el detalle del viaje.
 
 <Steps>
 
-1. Tocá el botón **"Reportar Incidencia"** (ícono de alerta en la barra superior).
-2. Seleccioná el tipo de incidencia.
-3. Agregá una nota si es necesario y confirmá.
+1. Tocá el botón de **incidente**. Se abre **Reportar incidente**.
+2. Elegí el tipo. No viene ninguno preseleccionado, para que no avises algo sin querer.
+3. Si querés, escribí una **Descripción (opcional)**.
+4. Tocá el botón rojo de abajo. Su texto cambia según el tipo elegido: por ejemplo, **Reportar accidente**.
 
 </Steps>
 
-## Tipos de Incidencia
+<div style={{maxWidth: '260px', margin: '1.5rem auto'}}>
 
-| Situación | Qué seleccionar |
-|-----------|-----------------|
-| Hay mucho tráfico | Demora por tráfico |
-| El vehículo se rompió | Falla mecánica |
-| El cliente no está en la dirección | Ausencia del destinatario *(esto también se reporta desde la parada)* |
-| Otro problema | Otro — y describilo en la nota |
+![Hoja Reportar incidente con los cuatro tipos, Accidente seleccionado, el aviso de llamar a emergencias si hay riesgo de vida y el botón Reportar accidente](../../../assets/movil/movil-26-incidente.jpg)
 
-:::caution
-No abandones la ruta sin reportar la incidencia. El operador necesita saberlo para reasignar paradas.
+*La hoja de incidente con **Accidente** elegido. Fijate en el aviso amarillo.*
+
+</div>
+
+## Tipos de incidente
+
+| Tipo | Cuándo usarlo |
+|------|---------------|
+| **Pánico / emergencia** | Una situación de peligro o emergencia |
+| **Falla mecánica** | El vehículo se rompió o no puede seguir |
+| **Accidente** | Hubo un choque o accidente. Al elegirlo, la app te recuerda llamar a emergencias si hay riesgo de vida |
+| **Otro** | Cualquier otro problema que impida seguir; describilo en la descripción |
+
+Cuando se envía, la app confirma "Incidente reportado. Avisamos a la empresa."
+
+## Qué pasa con el viaje
+
+- Los incidentes de **pánico**, **falla mecánica** y **accidente** pasan el viaje a **Con problemas**. Mientras está así, las entregas quedan en pausa.
+- **Otro** queda registrado, pero **no cambia** el estado del viaje.
+- Los incidentes aparecen en el detalle del viaje y la empresa los ve en el panel web.
+
+## Reanudar un viaje con problemas
+
+Cuando el problema se resolvió, tenés que reanudar el viaje para seguir con las entregas.
+
+<Steps>
+
+1. Abrí el viaje: en la navegación aparece el aviso **"El viaje está con problemas. Reanudalo para seguir con las entregas."**
+2. Tocá **Reanudar viaje**.
+3. Confirmá con **Reanudar**. El viaje vuelve a **En camino** y se retoma el seguimiento por GPS.
+
+</Steps>
+
+<div style={{maxWidth: '260px', margin: '1.5rem auto'}}>
+
+![Navegación con el aviso El viaje está con problemas y la hoja Reanudar viaje con los botones Reanudar y Cancelar](../../../assets/movil/movil-27-reanudar-viaje.jpg)
+
+*Aviso de viaje con problemas y la hoja **Reanudar viaje**.*
+
+</div>
+
+:::note
+Un viaje **Con problemas** sigue contando como viaje en curso: no podés iniciar otro hasta reanudar o finalizar este. Si un administrador cancela el viaje, lo ves como **Cancelado**, sin acciones.
+:::
+
+:::tip
+Mientras estás sin conexión, el reporte se guarda y se envía apenas vuelve la señal ("Reporte guardado").
 :::

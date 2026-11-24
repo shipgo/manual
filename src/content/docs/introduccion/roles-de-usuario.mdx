@@ -1,22 +1,59 @@
 ---
 title: "Roles de Usuario"
-description: Los tres roles que interactúan con ShipGo!
+description: Qué puede hacer cada rol en ShipGo! y desde qué herramienta trabaja.
 sidebar:
   order: 2
 ---
 
 import { TabItem, Tabs } from '@astrojs/starlight/components';
 
-ShipGo! tiene tres roles con responsabilidades distintas:
+Cada usuario de ShipGo! tiene uno o más **roles**. El rol define qué pantallas ves y qué acciones podés hacer. Un administrador o superusuario asigna los roles al [crear el usuario](/manual/panel-web/administracion/).
 
 <Tabs>
-  <TabItem label="Administrador">
-Tiene acceso total al sistema. Gestiona usuarios, configura la plataforma y accede a todos los reportes analíticos. Es quien define las reglas del negocio.
+  <TabItem label="Superusuario">
+Trabaja en el **panel web** y tiene alcance sobre **toda la empresa**.
+
+- Ve y gestiona los datos de todas las sucursales. Con el selector **Todas las sucursales** de la barra superior puede quedarse con la vista global o mirar una sucursal puntual.
+- Es el único que administra las **Sucursales** y el único que puede asignar los roles Superusuario y Administrador.
+- Accede a todo lo que puede hacer un Administrador.
+
+Al ingresar por primera vez, si la empresa todavía no existe, el panel le pide **configurar la empresa** (nombre y datos de la primera sucursal) antes de mostrar el resto.
   </TabItem>
-  <TabItem label="Operador Logístico">
-Opera el día a día. Ingresa paquetes al sistema, arma viajes, asigna choferes y monitorea el estado de la flota desde el panel web.
+  <TabItem label="Administrador">
+Trabaja en el **panel web** y opera **su sucursal**.
+
+- Carga y edita envíos, arma viajes, sigue la flota en el mapa y consulta el dashboard.
+- Administra usuarios, vehículos, mantenimientos y el catálogo de marcas y modelos.
+- Los usuarios que crea quedan asignados a su sucursal, y solo puede darles los roles **Chofer** y **Operario de carga**.
+- No ve el menú **Sucursales**.
   </TabItem>
   <TabItem label="Chofer">
-Usa la app móvil durante su jornada. Ve su ruta asignada, marca entregas como exitosas o fallidas y reporta incidencias desde el campo.
+Trabaja solo desde la **app móvil**. Ve sus viajes, los inicia, navega la ruta, registra entregas y entregas fallidas, y reporta incidentes.
+
+Si un chofer intenta entrar al panel web, ShipGo! le muestra el aviso **Usá la app móvil**: su cuenta no tiene acceso al panel.
+
+Ver [App móvil](/manual/app-mobile/mis-viajes/).
+  </TabItem>
+  <TabItem label="Operario de carga">
+Trabaja solo desde la **app móvil**. Controla qué envíos se cargan en el vehículo de un viaje y cierra la carga para que el viaje quede listo para salir. Tampoco tiene acceso al panel web.
+  </TabItem>
+  <TabItem label="Cliente">
+Se registra solo, desde la pantalla de inicio, y usa el **portal de clientes** para ver sus envíos y las notificaciones. No accede al panel web ni a la app de choferes.
   </TabItem>
 </Tabs>
+
+## Resumen de accesos al panel web
+
+| Sección | Superusuario | Administrador |
+|---------|:-----------:|:-------------:|
+| Inicio, Mapa, Dashboard | Sí | Sí |
+| Envíos y Viajes | Sí | Sí |
+| Usuarios | Sí | Sí |
+| Vehículos y Mantenimientos | Sí | Sí |
+| Marcas y modelos | Sí | Sí |
+| Sucursales | Sí | No |
+| Notificaciones | Sí | Sí |
+
+:::note
+Una misma persona puede tener más de un rol. Las pantallas que ve se calculan con el conjunto de sus roles.
+:::
