@@ -16,6 +16,9 @@ export default defineConfig({
         replacesTitle: true,
       },
       customCss: ['./src/styles/marca.css'],
+      components: {
+        Head: './src/components/Head.astro',
+      },
       head: [
         { tag: 'meta', attrs: { name: 'theme-color', content: '#004d40', media: '(prefers-color-scheme: light)' } },
         { tag: 'meta', attrs: { name: 'theme-color', content: '#0d1f1c', media: '(prefers-color-scheme: dark)' } },

@@ -1,0 +1,9 @@
+---
+// Navegación del lado del cliente (view transitions de Astro): al cambiar de página
+// se reemplaza sólo el contenido en vez de recargar el documento completo.
+import Default from '@astrojs/starlight/components/Head.astro';
+import { ClientRouter } from 'astro:transitions';
+---
+
+<Default {...Astro.props}><slot /></Default>
+<ClientRouter />
