@@ -1,19 +1,24 @@
-/* Marca ShipGo!: escala teal de web-frontend (src/app/constants/colorPalette.js). */
+/*
+ * Marca ShipGo!: escala teal de web-frontend (src/app/constants/colorPalette.js).
+ * La numeración sigue COLOR_PALETTE (0-based, igual que `colorPalette-N` en Mantine).
+ * Los grises de fondo de la cabecera y el sidebar (#0d1f1c, #14302b, #f3faf9, #cfe7e4)
+ * son propios del manual y no vienen de la paleta de la app.
+ */
 :root {
-  --shg-teal-1: #e0f2f1;
-  --shg-teal-2: #b2dfdb;
-  --shg-teal-5: #26a69a;
+  --shg-teal-1: #b2dfdb;
+  --shg-teal-4: #26a69a;
   --shg-teal-7: #00796b;
   --shg-teal-9: #004d40;
-  --shg-teal-10: #00332b;
 }
 
 /* Oscuro (por defecto en Starlight) */
 :root {
   --sl-color-accent-low: var(--shg-teal-9);
-  --sl-color-accent: var(--shg-teal-5);
-  --sl-color-accent-high: var(--shg-teal-2);
-  --sl-color-text-accent: var(--shg-teal-5);
+  --sl-color-accent: var(--shg-teal-4);
+  --sl-color-accent-high: var(--shg-teal-1);
+  --sl-color-text-accent: var(--shg-teal-4);
+  /* Texto sobre el acento (ítem activo del sidebar, skip link): #17181c sobre #26a69a = 5.92:1 */
+  --sl-color-text-invert: var(--sl-color-black);
 }
 
 :root[data-theme='dark'] {
@@ -24,7 +29,7 @@
 
 /* Claro */
 :root[data-theme='light'] {
-  --sl-color-accent-low: var(--shg-teal-2);
+  --sl-color-accent-low: var(--shg-teal-1);
   --sl-color-accent: var(--shg-teal-7);
   --sl-color-accent-high: var(--shg-teal-9);
   --sl-color-text-accent: var(--shg-teal-7);
@@ -39,7 +44,7 @@
   width: auto;
 }
 .site-title::after {
-  content: 'Manual de usuario';
+  content: 'Manual de usuario' / '';
   margin-inline-start: 0.75rem;
   padding-inline-start: 0.75rem;
   border-inline-start: 1px solid var(--sl-color-hairline);
@@ -61,9 +66,9 @@
   color: #fff;
 }
 :root[data-theme='dark'] .sl-link-button.primary {
-  background-color: var(--shg-teal-5);
-  border-color: var(--shg-teal-5);
-  color: #00332b;
+  background-color: var(--shg-teal-4);
+  border-color: var(--shg-teal-4);
+  color: var(--sl-color-black);
 }
 .sl-link-card {
   border-radius: 0.75rem;
